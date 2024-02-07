@@ -1,3 +1,4 @@
+//Area del triangulo
 #include <iostream>
 
 using namespace std;
@@ -28,3 +29,35 @@ float area(float b, float h)
     aux=(b*h)/2;
     return aux;
 }
+
+
+ //Formula Cuadratica
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double a, b, c, r, i, z, x, x1, x2; //z= discriminante, r=real, i=imaginario
+    cout<<"Digite un valor para a"; cin>>a;
+    cout<<"Digite un valor para b"; cin>>b;
+    cout<<"Digite un valor para c"; cin>>c;
+    
+    z=(pow(b,2)-4*a*c);
+    if (z>0)
+    {
+         x1=(-b+sqrt(z))/(2*a);
+         x2=(-b+sqrt(z))/(2*a);
+        cout<<"La soluciones son: "<<x1 <<"y" <<x2<<endl;
+    }
+    else if (z==0)
+    {
+        x=-b/(2*a);
+        cout<<"La solucion es:"<< x <<endl;
+    }
+    else
+    {
+        r=-b/(2*a);
+        i=sqrt(-z)/(2*a);
+        cout<<"La soluciones son: "<< r << "+"<< i << "i y" <<  r << "-" << i<< "i"<<endl;
+        return 0;
+    }
