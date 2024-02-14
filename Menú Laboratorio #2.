@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+void s(float a, float b);
+void r(float a, float b);
+void m(float a, float b);
+
+int main()
+{
+    float num1, num2;
+    int op;
+    do{
+        cout<<"MENU DE OPERACIONES"<<endl;
+        cout<<"1. SUMA"<<endl;
+        cout<<"2. RESTA"<<endl;
+        cout<<"3. MULTIPLICAR"<<endl;
+        cout<<"0. SALIR"<<endl;
+        cin>>op;
+        switch(op)
+        {
+            case 1: cout<<"Digite el primer numero"; cin>>num1;
+            cout<<"Digite el segundo numero"; cin>>num2;
+            s(num1, num2);
+            break;
+             case 2: cout<<"Digite el primer numero"; cin>>num1;
+            cout<<"Digite el segundo numero"; cin>>num2;
+            r(num1, num2);
+            break;
+             case 3: cout<<"Digite el primer numero"; cin>>num1;
+            cout<<"Digite el segundo numero"; cin>>num2;
+            m(num1, num2);
+            break;
+            case 0: cout<<"SALIENDO DEL PROGRAMA...";
+            break;
+            default: cout<<"Opcion no valida, ingrese una de las opciones que se muestran en pantalla";
+            break;
+        }
+    }while (op!=0);
+    
+
+    return 0;
+}
+
+void s(float a, float b)
+{
+    cout<<"La suma de"<< a << "y"<< b <<"es: " <<   (a+b)<<endl;
+}
+void r(float a, float b)
+{
+    cout<<"La resta de"<< a << "y"<< b << "es:"<<   (a-b)<<endl;
+}
+void m(float a, float b)
+{
+    cout<<"La multiplicacion de"<< a << "y"<< b << "es:"<<   (a*b)<<endl;
+}
+    
