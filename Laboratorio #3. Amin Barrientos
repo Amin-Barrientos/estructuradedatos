@@ -1,0 +1,105 @@
+/*Factorial, Amin Barrientos, 21/02/2024*/
+#include <iostream>
+
+using namespace std;
+
+int factorial(int n);
+
+int main()
+{
+    int n;
+    cout<<"Digite el numero: ";
+    cin>>n;
+    cout<<"El Factorial de n es: "<<factorial(n);
+    return 0;
+}
+int factorial(int n)
+{
+    if(n==0)
+    return 1;
+    else
+    return n*factorial(n - 1);
+}
+
+/*Potencia, Amin Barrientos, 21/02/2024*/
+#include <iostream>
+using namespace std;
+int potencia(int b, int e);
+
+int main()
+{
+    int b, e;
+    cout<<"Digite la base: ";
+    cin>> b;
+    cout<<"Digite el exponente: ";
+    cin>> e;
+    cout<<"El resultado es: "<<potencia(b, e);
+    
+    return 0;
+}
+int potencia(int b, int e)
+{
+    if(e==0)
+    return 1;
+    else
+    return b*potencia(b,(e - 1));
+}
+
+/*Fibonacci, Amin Barrientos, 21/02/2024*/
+#include <iostream>
+
+using namespace std;
+
+int fibonacci(int n, int a, int b);
+
+int main()
+{
+    int n, a=0, b=1;
+    cout<<"Digite el numero para la serie de Fibonacci: ";
+    cin>>n;
+    cout<<"Los numeros de la sucesion de Fibonacci son: "<<fibonacci(n, a, b);
+    return 0;
+}
+int fibonacci(int n, int a, int b)
+{
+    if(n==0)
+    return a;
+    else
+    {
+    cout<< a <<" ";
+    return fibonacci(n - 1, b, a + b);
+    }
+}
+
+TRABAJO EN THONNY (Python)
+
+#Amin Barrientos, Factorial, 21/02/2024
+def factorial_recursivo(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial_recursivo(n-1)
+
+z=factorial_recursivo(5) # 120
+print(z)
+
+#Amin Barrientos, Perimetro de Circunferencia, 21/02/2024
+def perimetro_circunferencia(r):
+        return z=(3.1416)*(2)*r
+print('Digite un valor para radio: ')
+r=input()
+        
+z=perimetro_circunferencia(r)
+print(z)
+
+#Amin Barrientos, Potencia, 21/02/2024
+def potencia_recursivo(b, e):
+    if e == 0:
+        return 1
+    else:
+        return b * potencia_recursivo(b,(e-1))
+
+z=potencia_recursivo(3, 2) # 9
+print(z)
+
+
